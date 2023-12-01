@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/8edc8645ce.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/body.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="body">
+      <header>
+        <div class="logo">My logo</div>
+        <span class="hamburger" style="position: relative" onclick="showMobilemenu('main','footer')">
+          <i class="fa-solid fa-bars fa-2xl"></i>
+        </span>
+        <script>
+          function showMobilemenu(classname1,classname2) {
+           
+        
+
+            var main = document.getElementsByTagName(classname1);
+            var footer = document.getElementsByTagName(classname2);
+            var mob_mn = document.getElementsByClassName('mobile_menu');
+           
+            if (main[0].className.indexOf("menuhide") == -1) {
+              main[0].className += " menuhide";
+              mob_mn[0].style.display="flex";
+            } else {
+              main[0].className = main[0].className.replace(" menuhide", "");
+              mob_mn[0].style.display="none";
+            }
+            if (footer[0].className.indexOf("footerhide") == -1) {
+              footer[0].className += " footerhide";
+            } else {
+              footer[0].className = footer[0].className.replace(" footerhide", "");
+            }
+          }
+        </script>
+        <nav>
+          <div class="menu">
+            <div class="menu_item">Hello world</div>
+            <div class="menu_item">
+              Certifications<i class="fa-solid fa-angle-down"></i>
+              <div class="dropdown-content">
+                <a href="#">AWS</a>
+                <a href="#">Scrum</a>
+                <a href="#">Geospatial Analysis</a>
+                <a href="#">QA/QC</a>
+              </div>
+            </div>
+            <div class="menu_item">Experience</div>
+            <div class="menu_item">
+              Portfolio<i class="fa-solid fa-angle-down"></i>
+              <div class="dropdown-content">
+                <a href="#">React Applications</a>
+                <a href="#">APIs</a>
+                <a href="#">AWS</a>
+                <a href="#">.NET</a>
+              </div>
+            </div>
+            <div class="menu_item">My blog</div>
+            <div class="menu_item tablet_socials">
+              Social Media<i class="fa-solid fa-angle-down"></i>
+              <div class="dropdown-content">
+                <a href="#">Linkedn</a>
+                <a href="#">Github</a>
+            
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="social_media">
+          <span class="button social_btn">Linkedn</span>
+          <span class="button social_btn">Github</span>
+        </div>
+      </header>
+      <div class="mobile_menu"> 
+                  <nav class="mobile_nav">
+                     <div class="mobile_nav_item">Hello world</div>
+                     <div class="mobile_nav_item" onclick='showMobileAccordion(this)'>Certifications
+                      <i class="fa-solid fa-angle-down"></i>
+                      <div class="mobile_nav_accordion">
+                    
+                        <div class="mna_item">
+                          AWS
+                        </div>
+                        <div class="mna_item">
+                          Scrum
+                        </div>
+                        <div class="mna_item">
+                          Geospatial Analysis
+                        </div>
+                        <div class="mna_item">
+                          QA/QC
+                        </div>
+                      
+                      </div>
+                    </div>
+                    <div class="mobile_nav_item">Experience </div>
+                    <div class="mobile_nav_item" onclick='showMobileAccordion(this)'>Portfolio
+                      <i class="fa-solid fa-angle-down"></i>
+                      <div class="mobile_nav_accordion">
+                    
+                        <div class="mna_item">
+                          AWS
+                        </div>
+                        <div class="mna_item">
+                          Scrum
+                        </div>
+                        <div class="mna_item">
+                          Geospatial Analysis
+                        </div>
+                        <div class="mna_item">
+                          QA/QC
+                        </div>
+                      
+                      </div>
+                    </div>
+                    <div class="mobile_nav_item">My Blog </div>
+                  </nav>
+      </div>
+      <script>
+        function showMobileAccordion(e) {
+    //Get the target
+    //query for the child
+    let parent=e;
+        let acc=parent.getElementsByClassName('mobile_nav_accordion')[0]
+          console.log(acc);
+          if (acc.className.indexOf("display") == -1) {
+            acc.className += " display";
+          } else {
+            acc.className = acc.className.replace(" display", "");
+          }
+
+    
+        }
+     
+     function reSize(){
+
+      let mmenu=document.getElementsByClassName('mobile_menu')[0]
+      let result = window.matchMedia("(max-width: 600px)").matches;//returns booles
+      var main = document.getElementsByTagName('main');
+            var footer = document.getElementsByTagName('footer');
+         
+        if (result === false) {
+          mmenu.style.display = "none";
+          main[0].className = main[0].className.replace(" menuhide", "");
+            footer[0].className = footer[0].className.replace(" footerhide", "");
+        }
+
+     }
+     window.addEventListener('resize', reSize );
+     
+     </script>
+      <main class="">
+        <div class="hero_content">
+          <div class="content_one">
+            <h1>
+              Optimizing operations, ensuring quality is what I love to do
+            </h1>
+          </div>
+          <div class="content_two">
+            <hp>Design patterns,Data structures and algorithsm,Cloud technology, CI/CD,Geospatial Analysis</p>
+          </div>
+        </div>
+        <div class="overflow">
+          <div class="overflow_item"></div>
+          <div class="overflow_item"></div>
+          <div class="overflow_item"></div>
+          <div class="overflow_item"></div>
+          <div class="overflow_item"></div>
+          <div class="overflow_item"></div>
+        </div>
+        <div class="skills">
+          <div class="skills_intro">
+            <div class="header"><h3>Over 6 years experience in IT</h3></div>
+            <div class="paragraph">
+              epluribus unum maqnificious escalibur numero uno
+            </div>
+          </div>
+          <div class="skills_items">
+            <div class="skill">
+                <h5>.Net</h5>
+                <p>over 4 years experience working with .Net</p>
+                <span class="view_in_portfolio button"><a>view projects</a></span>
+              </div>
+            <div class="skill">
+              <h5>.Net</h5>
+              <p>over 4 years experience working with .Net</p>
+              <span class="view_in_portfolio button"><a>view projects</a></span>
+            </div>
+            <div class="skill">
+              <h5>React</h5>
+              <p>over 4 years experience working with .Net</p>
+              <span class="view_in_portfolio button"><a>view projects</a></span>
+            </div>
+            <div class="skill">
+              <h5>SQL/No SQL</h5>
+              <p>over 4 years experience working with .Net</p>
+              <span class="view_in_portfolio button"><a>view projects</a></span>
+            </div>
+            <div class="skill">
+              <h5>AWS/AZURE</h5>
+              <p>over 4 years experience working with .Net</p>
+              <span class="view_in_portfolio button"><a>view projects</a></span>
+            </div>
+            <div class="skill">
+              <h5>AWS/AZURE</h5>
+              <p>over 4 years experience working with .Net</p>
+              <span class="view_in_portfolio button"><a>view projects</a></span>
+            </div>
+            
+          </div>
+        </div>
+      </main>
+      <footer class="">jjj</footer>
+    </div>
+  </body>
+</html>

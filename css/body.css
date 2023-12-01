@@ -1,0 +1,15 @@
+.body {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+header,
+main,
+footer {
+  width: 82%;
+}
